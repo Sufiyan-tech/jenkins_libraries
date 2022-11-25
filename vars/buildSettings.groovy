@@ -34,8 +34,9 @@ class BuildSetting{
 
 
 def call(int buildNo){
-    BuildSetting bSetting = new BuildSetting(buildNo , currentBuild.number)
-    bSetting.setBuildSetting()
-    currentBuild.displayName = bSetting.name
-    currentBuild.description = bSetting.description
+    bat "echo DD"
+    // BuildSetting bSetting = new BuildSetting(buildNo , currentBuild.number)
+    // bSetting.setBuildSetting()
+    // currentBuild.displayName = bSetting.name
+    // currentBuild.description = bSetting.description
 }
