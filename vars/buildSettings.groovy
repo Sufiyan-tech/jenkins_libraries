@@ -9,7 +9,7 @@ class BuildSetting{
         this.setBuildSetting()
     }
 
-    
+    @NonCPS
     public void setBuildSetting(){
         switch(this.buildNo){
             case 0:
