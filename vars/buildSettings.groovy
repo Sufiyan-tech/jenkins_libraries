@@ -16,11 +16,11 @@ class BuildSetting{
                 this.buildName = "Sufiyan Zero Build"
                 this.buildDescription = "Sufiyan Zero Description"
                 break
-            case {build > 0}:
+            case (build > 0):
                 this.buildName = "Sufiyan Positive Build"
                 this.buildDescription = "Sufiyan Positive Description"
                 break
-            case {build < 0}:
+            case (build < 0):
                 this.buildName = "Sufiyan Negative Build"
                 this.buildDescription = "Sufiyan Negative Description"        
                 break
