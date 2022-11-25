@@ -12,22 +12,26 @@ class BuildSetting{
     @NonCPS
     public void setBuildSetting(){
         switch(this.buildNo){
-            case 0:
+            case 0:{
                 this.buildName = "Sufiyan Zero Build"
                 this.buildDescription = "Sufiyan Zero Description"
                 break
-            case {this.buildNo > 0}:
+            }
+            case {this.buildNo > 0}:{
                 this.buildName = "Sufiyan Positive Build"
                 this.buildDescription = "Sufiyan Positive Description"
                 break
-            case {this.buildNo < 0}:
+            }
+            case {this.buildNo < 0}:{
                 this.buildName = "Sufiyan Negative Build"
                 this.buildDescription = "Sufiyan Negative Description"        
                 break
-            default:
+            }
+            default:{
                 this.buildName = "Sufiyan "+this.currentBuildNo+" Build"
                 this.buildDescription = "Sufiyan "+this.currentBuildNo+" Description"        
                 break
+            }
 
         }
     }
