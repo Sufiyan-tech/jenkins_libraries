@@ -35,8 +35,7 @@ class BuildSetting{
 
 
 def call(int buildNo){
-    bat "echo DD"
     BuildSetting bSetting = new BuildSetting(buildNo , currentBuild.number)
-    currentBuild.displayName = bSetting.name
-    currentBuild.description = bSetting.description
+    currentBuild.displayName = bSetting.buildName
+    currentBuild.description = bSetting.buildDescription
 }
