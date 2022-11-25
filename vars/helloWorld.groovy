@@ -1,3 +1,3 @@
-def call(){
-    bat "echo hello world"
+def call(String name , String description){
+    bat "echo hello ${name} and ${descritpion}"
 }
