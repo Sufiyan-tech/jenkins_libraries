@@ -1,14 +1,14 @@
-class BuildSettings{
+class BuildSetting{
     int buildNo
     String buildName
     String buildDescription
     int currentBuildNo
 
-    public BuildSettings(int buildNo , currentBuildNo){
+    public BuildSetting(int buildNo , currentBuildNo){
         this.currentBuildNo = currentBuildNo
     }
 
-    public void setBuildSettings(){
+    public void setBuildSetting(){
         switch(this.buildNo){
             case 0:
                 this.buildName = "Sufiyan Zero Build"
@@ -34,8 +34,8 @@ class BuildSettings{
 
 
 def call(int buildNo){
-    BuildSettings bSetting = new BuildSettings(buildNo , currentBuild.number)
-    bSetting.setBuildSettings()
+    BuildSetting bSetting = new BuildSetting(buildNo , currentBuild.number)
+    bSetting.setBuildSetting()
     currentBuild.displayName = bSetting.name
     currentBuild.description = bSetting.description
 }
