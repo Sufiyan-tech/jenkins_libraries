@@ -26,7 +26,7 @@ class DBSetting{
 }
 
 
-def call(String workspace){
-    DBSetting dbSetting = new DBSetting(workspace)
+def call(String workspace , String dbname , String filepath , boolean is_parameterized , Map parameters){
+    DBSetting dbSetting = new DBSetting(workspace , String dbname , String filepath , boolean is_parameterized , Map parameters)
     return dbSetting.createSqlCommand()
 }
