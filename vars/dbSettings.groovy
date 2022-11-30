@@ -23,6 +23,13 @@ class DBSetting{
     @NonCPS
     String createSqlCommand(){
         String cmd = "cd ${this.workspace+this.filepath}&& set PGPASSWORD=${this.password}&& psql -h ${this.hostname} -d ${this.dbname} -U ${this.username} -p ${this.port} -f ${this.filename}.sql"
+        if(this.is_parameterized){
+            String str_par = ""
+            for(parameter in this.parameters){
+                str_par += " -v ${parameter.key}='${parameter.value}' "
+            } 
+            cmd = "cd ${this.workspace+this.filepath}&& set PGPASSWORD=${this.password}&& psql ${str_par} -h ${this.hostname} -d ${this.dbname} -U ${this.username} -p ${this.port} -f ${this.filename}.sql"
+        }
         return cmd
     }
 }
