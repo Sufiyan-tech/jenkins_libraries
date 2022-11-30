@@ -18,8 +18,9 @@ class DBSetting{
     }
 
     @NonCPS
-    void createSqlCommand(){
+    String createSqlCommand(){
         String cmd = "${this.workspace}"
+        return cmd
     }
 }
 
