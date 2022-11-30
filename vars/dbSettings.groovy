@@ -20,7 +20,7 @@ class DBSetting{
 
     @NonCPS
     String createSqlCommand(){
-        String cmd = "cd ${this.workspace}&& set PGPASSWORD=${this.password}"
+        String cmd = "cd ${this.workspace}&& set PGPASSWORD=${this.password} -h ${this.hostname}"
         return cmd
     }
 }
