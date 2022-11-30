@@ -1,21 +1,17 @@
 class DBSetting{
     String workspace
-    String hostname
-    String username
-    String password 
-    String port
+    String final hostname = "192.168.2.51"
+    String final username = "UR_DEV"
+    String final password = "UR_DEV"
+    String final port = "5432"
     String dbname
     String filepath
     boolean is_parameterized
     Map parameters
 
      
-    DBSetting(String workspace , String hostname , String username , String password , String port , String dbname , String filepath , boolean is_parameterized , Map parameters){
+    DBSetting(String workspace , String dbname , String filepath , boolean is_parameterized , Map parameters){
         this.workspace = workspace
-        this.hostname = hostname
-        this.username = username
-        this.password = password
-        this.port = port
         this.dbname = dbname
         this.filepath = filepath
         this.is_parameterized = is_parameterized
