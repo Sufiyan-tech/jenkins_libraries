@@ -9,7 +9,7 @@ class DBSetting{
     boolean is_parameterized
     def parameters = [:]
 
-    DBSetting(String workspace= "C:/"){
+    DBSetting(String workspace= "${WORKSPACE}"){
         this.workspace = workspace
     }
 
