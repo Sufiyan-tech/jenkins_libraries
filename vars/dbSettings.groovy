@@ -5,13 +5,21 @@ class DBSetting{
     String password 
     String port
     String dbname
-    String file
+    String filepath
     boolean is_parameterized
-    def parameters = [:]
+    Map parameters
 
      
-    DBSetting(String workspace= "C:/"){
+    DBSetting(String workspace , String hostname , String username , String password , String port , String dbname , String filepath , boolean is_parameterized , Map parameters){
         this.workspace = workspace
+        this.hostname = hostname
+        this.username = username
+        this.password = password
+        this.port = port
+        this.dbname = dbname
+        this.filepath = filepath
+        this.is_parameterized = is_parameterized
+        this.parameters = parameters   
     }
 
     @NonCPS
