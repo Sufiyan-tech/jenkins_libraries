@@ -19,7 +19,7 @@ class DBSetting{
 
     @NonCPS
     void executeSqlCommand(){
-        println this.workspace
+        bat "echo ${this.workspace}"
     }
 }
 
