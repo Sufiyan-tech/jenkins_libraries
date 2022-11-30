@@ -8,9 +8,12 @@ class DBSetting{
     String file
     boolean is_parameterized
     def parameters = [:]
-    String defaultWorkspace = "${WORKSPACE}"
 
-    DBSetting(String workspace = defaultWorkspace){
+    /* This Is Default Constructor */
+    DBSetting(){
+    }
+     
+    DBSetting(String workspace= "C:/"){
         this.workspace = workspace
     }
 
@@ -23,6 +26,6 @@ class DBSetting{
 
 
 def call(String workspace){
-    DBSetting dbSetting = new DBSetting()
+    DBSetting dbSetting = new DBSetting(workspace)
     return dbSetting.createSqlCommand()
 }
