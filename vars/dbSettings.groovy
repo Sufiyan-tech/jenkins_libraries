@@ -4,7 +4,7 @@ class DBSetting{
     final String username = "UR_DEV"
     final String password = "UR_DEV"
     final String port = "5432"
-    final String dbname
+    String dbname
     String filepath
     boolean is_parameterized
     Map parameters
@@ -27,6 +27,6 @@ class DBSetting{
 
 
 def call(String workspace , String dbname , String filepath , boolean is_parameterized , Map parameters){
-    DBSetting dbSetting = new DBSetting(workspace , String dbname , String filepath , boolean is_parameterized , Map parameters)
+    DBSetting dbSetting = new DBSetting(workspace , dbname , filepath , is_parameterized , parameters)
     return dbSetting.createSqlCommand()
 }
