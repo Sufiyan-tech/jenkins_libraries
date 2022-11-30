@@ -8,8 +8,9 @@ class DBSetting{
     String file
     boolean is_parameterized
     def parameters = [:]
+    String defaultWorkspace = "${WORKSPACE}"
 
-    DBSetting(String workspace= "${WORKSPACE}"){
+    DBSetting(String workspace = defaultWorkspace){
         this.workspace = workspace
     }
 
