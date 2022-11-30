@@ -19,7 +19,7 @@ class DBSetting{
 
     @NonCPS
     String createSqlCommand(){
-        String cmd = "${this.workspace}"
+        String cmd = "cd ${this.workspace}"
         return cmd
     }
 }
