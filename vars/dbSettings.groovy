@@ -9,9 +9,6 @@ class DBSetting{
     boolean is_parameterized
     def parameters = [:]
 
-    /* This Is Default Constructor */
-    DBSetting(){
-    }
      
     DBSetting(String workspace= "C:/"){
         this.workspace = workspace
