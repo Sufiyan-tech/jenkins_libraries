@@ -17,6 +17,7 @@ class DBSetting{
         this.workspace = workspace
     }
 
+    @NonCPS
     void executeSqlCommand(){
         println this.workspace
     }
