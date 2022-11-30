@@ -26,5 +26,5 @@ class DBSetting{
 
 def call(String workspace){
     DBSetting dbSetting = new DBSetting()
-    return dbSetting.executeSqlCommand()
+    return dbSetting.createSqlCommand()
 }
