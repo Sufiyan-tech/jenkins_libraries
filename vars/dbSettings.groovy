@@ -23,7 +23,7 @@ class DBSetting{
 }
 
 
-def call(){
+def call(String workspace){
     DBSetting dbSetting = new DBSetting()
     dbSetting.executeSqlCommand()
 }
