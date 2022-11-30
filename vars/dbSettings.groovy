@@ -13,7 +13,7 @@ class DBSetting{
     DBSetting(){
     }
      
-    DBSetting(String workspace = ${WORKSPACE}){
+    DBSetting(String workspace){
         this.workspace = workspace
     }
 
