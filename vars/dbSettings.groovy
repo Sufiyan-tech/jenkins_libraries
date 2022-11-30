@@ -13,7 +13,7 @@ class DBSetting{
     DBSetting(){
     }
      
-    DBSetting(String workspace){
+    DBSetting(String workspace= "C:/"){
         this.workspace = workspace
     }
 
@@ -26,6 +26,6 @@ class DBSetting{
 
 
 def call(String workspace){
-    DBSetting dbSetting = new DBSetting(workspace)
+    DBSetting dbSetting = new DBSetting()
     return dbSetting.createSqlCommand()
 }
