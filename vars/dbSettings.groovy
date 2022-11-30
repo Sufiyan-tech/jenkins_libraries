@@ -18,13 +18,13 @@ class DBSetting{
     }
 
     @NonCPS
-    void executeSqlCommand(){
-        bat "echo ${this.workspace}"
+    void createSqlCommand(){
+        String cmd = "${this.workspace}"
     }
 }
 
 
 def call(String workspace){
     DBSetting dbSetting = new DBSetting()
-    dbSetting.executeSqlCommand()
+    return dbSetting.executeSqlCommand()
 }
